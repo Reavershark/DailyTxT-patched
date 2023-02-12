@@ -1,8 +1,8 @@
 module.exports = {
   devServer: {},
   pwa: {
-    name: 'DailyTxT',
-    short_name: 'DailyTxT',
+    name: 'Agenda Voke',
+    short_name: 'Agenda Voke',
     themeColor: '#2196f3',
     msTileColor: '#2196f3',
     backgroundColor: '#2196f3',
@@ -24,7 +24,7 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.js',
-      title: 'DailyTxT'
+      title: 'Agenda Voke'
     }
   },
   publicPath: ''

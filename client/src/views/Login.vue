@@ -1,12 +1,6 @@
 <template>
   <div class="full-site">
-    <div class="logo-container">
-      <img
-        class="logo"
-        src="../../public/img/icons/locked_heart_with_keyhole.svg"
-      />
-    </div>
-    <h2>DailyTxT</h2>
+    <h2>Agenda Voke</h2>
     <ul
       class="collapsible login-container"
       :class="{ 'animate__animated animate__shakeX': error_shake }"
@@ -18,6 +12,12 @@
         </div>
         <div class="collapsible-body">
           <form @submit.prevent="handleLogin">
+            <div class="row">
+              <div class="input-field col s12">
+                <p>Iedereen gebruikt hetzelfde account:</p>
+                <p>Username = voke<br />Password = voke</p>
+              </div>
+            </div>
             <div class="row">
               <div class="input-field col s12">
                 <input
@@ -37,13 +37,7 @@
               </div>
             </div>
             <div class="row">
-              <button
-                v-if="!login_loading"
-                class="btn"
-                :class="{
-                  disabled: login_username == '' || login_password == ''
-                }"
-              >
+              <button v-if="!login_loading" class="btn">
                 <span>{{ $t('login-button') }}</span>
               </button>
               <div v-if="login_loading" class="preloader-wrapper small active">
@@ -69,7 +63,7 @@
           </form>
         </div>
       </li>
-      <li>
+      <li style="display: none">
         <div class="collapsible-header">
           <i class="material-icons">person_add</i>{{ $t('register-header') }}
         </div>

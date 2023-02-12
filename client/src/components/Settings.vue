@@ -42,7 +42,7 @@
       </div>
     </nav>
     <ul id="slide-out" class="settings-sidenav sidenav sidenav-fixed">
-      <li>
+      <li style="display: none">
         <a
           @click.prevent="setting('password')"
           :class="{ active: isMenuSelected('password') }"
@@ -136,7 +136,7 @@ export default {
   },
   data() {
     return {
-      selectedMenu: 'password',
+      selectedMenu: 'export',
       transitionName: 'fade',
       isMobile: false
     }

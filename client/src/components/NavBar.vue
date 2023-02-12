@@ -5,9 +5,8 @@
         ><i class="material-icons">menu</i></a
       >
       <a class="brand-logo center">
-        <img src="./../../public/img/icons/locked_heart_with_keyhole.svg" />
         <div class="title hide-on-small-only">
-          <div class="title-text">DailyTxT</div>
+          <div class="title-text">Agenda Voke</div>
         </div>
       </a>
       <ul id="nav-mobile" class="right">

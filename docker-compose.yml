@@ -2,14 +2,11 @@ version: "3"
 
 services:
   dailytxt:
-    image: phitux/dailytxt:latest
-    container_name: dailytxt
-    restart: always
+    image: reavershark/dailytxt-patched:v0.0.2
     environment:
       # That's the internal container-port. You can actually use any portnumber (must match with the one at 'ports')
       - PORT=8765
-
-      - SECRET_KEY=<openssl rand -base64 32>
+      - SECRET_KEY=k/7Qm3CP+KNCe9px5ZqqQbxRoDryL4254HpjObnbZvE=
 
       # Set it to False or remove the line completely to disallow registration of new users.
       - ALLOW_REGISTRATION=True
@@ -23,10 +20,4 @@ services:
       # Enable/disable a feature of DailyTxT to auto-check maximal once per hour if there's a newer version of DailyTxT available. Defaults to True if line is ommited.
       - ENABLE_UPDATE_CHECK=True
     ports:
-      - "127.0.0.1:<host_port>:8765"
-      # perhaps you only want:
-      # "<host_port>:8765"
-    volumes:
-      - "</save/my/dailytxt-files/here/>:/app/data/"
-      # Or perhaps if using on a windows enviroment:
-      # "C:/Users/example/dailytxt/:/app/data"
+      - "127.0.0.1:8765:8765"

@@ -1,0 +1,9 @@
+Changes:
+
+remove logo
+change title
+
+show default creds on login screen
+hide ability to change password
+
+hide register button
