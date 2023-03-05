@@ -152,7 +152,7 @@
           :attributes="datesWithLogs"
           ref="calendar"
           @update:from-page="getDaysWithLogsTrigger"
-          :locale="$t('calendar-locale')"
+          :locale="nl"
           ><template v-slot:footer>
             <div class="calendar-footer">
               <a
